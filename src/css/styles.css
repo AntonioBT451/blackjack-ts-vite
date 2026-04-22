@@ -1,0 +1,165 @@
+html,
+body {
+    margin: 0;
+    background-color: #2f4f2f;
+    color: white;
+}
+
+.titulo {
+    text-align: center;
+    padding: 4px 0;
+    background: black;
+    color: white;
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 3px solid #ffd700;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.titulo h1 {
+    margin: 0;
+    font-size: inherit;
+    animation: fadeInDown 1s ease;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn {
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    margin: 0 8px;
+    padding: 8px 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: lighter;
+    padding: 12px 20px;
+    margin: 15px 0;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 50px;
+    border-left: 4px solid #ffd700;
+    border-right: 4px solid #ffd700;
+    color: white;
+    backdrop-filter: blur(2px);
+}
+
+/* Contenedor de cartas - para mejor manejo */
+#cartas-jugador,
+#cartas-computadora {
+    display: flex;
+    position: relative;
+    min-height: 220px;
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+
+.carta {
+    position: relative;
+    width: 150px;
+    left: 100px;
+    margin-left: -75px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    filter: brightness(1);
+    cursor: pointer;
+}
+
+/* Efecto hover */
+.carta:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35);
+    filter: brightness(1.05);
+    transition: all 0.2s ease;
+}
+
+/* Efecto de click */
+.carta:active {
+    transform: translateY(-8px) scale(0.98);
+}
+
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+        padding: 8px 0;
+        border-bottom-width: 2px;
+    }
+
+    h2 {
+        font-size: 1.0rem;
+        padding: 6px 12px;
+        border-left-width: 2px;
+        border-right-width: 2px;
+        margin: 10px 0;
+    }
+
+    .btn {
+        width: auto;
+        min-width: 70px;
+        padding: 6px 8px;
+        font-size: 0.6rem;
+    }
+
+    .carta {
+        width: 100px;
+        left: 40px;
+        margin-left: -25px;
+    }
+}
+
+@media (max-width: 770px) {
+    .titulo {
+        font-size: 1.8rem;
+        letter-spacing: 1.5px;
+        padding: 6px 0;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+        padding: 8px 16px;
+        border-left-width: 3px;
+        border-right-width: 3px;
+    }
+
+    .btn {
+        padding: 8px 14px;
+        margin: 0 2px;
+        font-size: 0.9rem;
+    }
+
+    .carta {
+        width: 120px;
+        left: 75px;
+        margin-left: -50px;
+    }
+}
