@@ -21,10 +21,10 @@
 
   <nav aria-label="Controles del juego" class="mb-3">
     <div class="row mt-2">
-      <div class="col text-center">
-        <button class="btn btn-danger">Nuevo juego</button>
-        <button class="btn btn-primary">Pedir carta</button>
-        <button class="btn btn-primary">Detener</button>
+      <div id="divBotones" class="col text-center">
+        <button id="btnNuevo" class="btn btn-danger">Nuevo juego</button>
+        <button id="btnPedir" class="btn btn-primary">Pedir carta</button>
+        <button id="btnDetener" class="btn btn-primary">Detener</button>
       </div>
     </div>
   </nav>
@@ -34,24 +34,20 @@
       <div class="row">
         <div class="col">
           <section aria-labelledby="titulo-jugador">
-            <h2 id="titulo-jugador" class="mb-4">Jugador 1 - 0</h2>
+            <h2 id="titulo-jugador" class="mb-4">Jugador - <span id="ptosJugador">0</span></h2>
 
             <div id="cartas-jugador">
-              <img src="src/assets/cartas/10C.png" alt="" class="carta">
-              <img src="src/assets/cartas/10C.png" alt="" class="carta">
-              <img src="src/assets/cartas/10C.png" alt="" class="carta">
+              <!-- <img src="src/assets/cartas/10C.png" alt="" class="carta"> -->
             </div>
           </section>
         </div>
 
         <div class="col">
           <section aria-labelledby="titulo-computadora">
-            <h2 id="titulo-computadora" class="mb-4">Computadora - 0</h2>
+            <h2 id="titulo-computadora" class="mb-4">Computadora - <span id="ptosComputadora">0</span></h2>
 
             <div id="cartas-computadora">
-              <img src="src/assets/cartas/10C.png" alt="" class="carta">
-              <img src="src/assets/cartas/10C.png" alt="" class="carta">
-              <img src="src/assets/cartas/10C.png" alt="" class="carta">
+
             </div>
           </section>
         </div>
